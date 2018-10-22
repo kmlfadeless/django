@@ -1,62 +1,10 @@
-<!DOCTYPE html>
-<html lang="ru">
+{% extends 'master.html' %}
 
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet/less" type="text/css" href="static/mainapp/css/style.less" />
-    <script src="static/mainapp/js/less.min.js" ></script>
-    <title>Контакты</title>
-</head>
+{% block page_title %}
+Каталог
+{% endblock %}
 
-<body class="contacts-page">
-    <div class="container">
-        <header class="top">
-            <ul class="contacts">
-                <li class="email">k@kml.email</li>
-                <li class="phone">+49 157 39811291</li>
-            </ul>
-            <ul class="panel">
-                <li>
-                    <a href="/"><img alt="Поиск" src="static/mainapp/img/store/search.png"></a>
-                </li>
-                <li>
-                    <a href="/"><img alt="Профиль" src="static/mainapp/img/store/profile.png"></a>
-                </li>
-                <li>
-                    <a href="/"><img alt="Корзина" src="static/mainapp/img/store/cart.png"></a>
-                </li>
-            </ul>
-            <ul class="social">
-                <li>
-                    <a href="http://www.twitter.com"><img alt="Twitter" src="static/mainapp/img/store/twitter.png"></a>
-                </li>
-                <li>
-                    <a href="http://www.facebook.com"><img alt="Facebook" src="static/mainapp/mg/store/facebook.png"></a>
-                </li>
-                <li>
-                    <a href="http://plus.google.com"><img alt="Google Plus" src="static/mainapp/img/store/google.png"></a>
-                </li>
-                <li>
-                    <a href="http://www.instagram.com"><img alt="Instagram" src="static/mainapp/img/store/instagram.png"></a>
-                </li>
-            </ul>
-            <ul class="menu">
-                <li><img id="logo" src="static/mainapp/img/store/logo.png" alt="Продажа iPhone"></li>
-                <li>
-                    <a href="/">Главная</a>
-                </li>
-                <li>
-                    <a href="catalog">Каталог</a>
-                </li>
-                <li>
-                    <a href="contacts">Контакты</a>
-                </li>
-            </ul>
-        </header>
-    </div>
-    
-    <main class="contactscontent main-content">
-        <div class="container">
+{% block main_content %}
             <h1 class="page-title">Напишите нам</h1>
             <form id="contactform" action="">
                 <fieldset>
@@ -77,51 +25,12 @@
                 </fieldset>
             </form>
             <h1>Адрес</h1>
-            <p>Наш телефон: <b>+49 157 12345678</b></p>
-            <p>Адрес: Berlin, Eberswalder straße 6, Deutschland</p>
-            <p>Email: k <img src="static/mainapp/img/store/at.jpg" alt="собака"> kml.email</p>
+            <p>Наш телефон: <b>{{ phone }}</b></p>
+            <p>Адрес: {{ address }}</p>
+            <p>Email: {{ email }}</p>
             <div class="mapouter">
                 <div class="gmap_canvas">
                     <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=eberswalder str 6, berlin&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                 </div>
             </div>
-        </div>
-    </main>
-    
-    <div class="container">
-        <footer class="footer">
-            <div class="left">
-               <ul>
-                   <li>
-                       <img id="logo" src="static/mainapp/img/store/logo.png" alt="Продажа iPhone">
-                   </li>
-                   <li>&copy; Все права защищены</li>
-               </ul>
-            </div>
-            <nav class="right">
-                <ul class="menu">
-                    <li>
-                        <a href="/">Главная</a>
-                    </li>
-                    <li>
-                        <a href="catalog">Каталог</a>
-                    </li>
-                    <li>
-                        <a href="contacts">Контакты</a>
-                    </li>
-                    <li>
-                        <a href="/">Главная</a>
-                    </li>
-                    <li>
-                        <a href="catalog">Каталог</a>
-                    </li>
-                    <li>
-                        <a href="contacts">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-        </footer>
-    </div>
-</body>
-
-</html>
+{% endblock %}

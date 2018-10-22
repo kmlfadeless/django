@@ -1,0 +1,21 @@
+{% extends 'master.html' %}
+
+{% block page_title %}
+Каталог
+{% endblock %}
+
+{% block main_content %}
+            <h1 class="page-title">
+                Каталог
+            </h1>
+            <div class="catalog-list">
+                <ul>
+                    {% for product in products %}
+                        <li class="product-item">
+                            <img alt="{{product.alt}}" src="/static/mainapp/img/products/small/{{product.img_name}}">
+                            <a href="/products/{{ forloop.counter0 }}">{{product.name}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>      
+{% endblock %}
