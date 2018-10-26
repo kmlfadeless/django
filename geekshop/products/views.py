@@ -1,4 +1,3 @@
-import json
 from django.shortcuts import render
 
 from .models import Product, Category
@@ -19,4 +18,4 @@ def product_list(request, pk):
 def product_detail_by_url_key(request, url_key):
     obj = Product.objects.get(url_key=url_key)
 
-    return render(request, 'products/detail.html', {'object': obj})
+    return render(request, 'products/detail.html', {'product': obj})
