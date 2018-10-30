@@ -6,7 +6,7 @@ from django.contrib.auth.models import AbstractUser
 class AccountUser(AbstractUser):
     avatar = models.ForeignKey(
         'images.Image',
-        on_delete = models.PROTECT,
+        on_delete=models.PROTECT,
         blank=True,
         null=True,
     )
