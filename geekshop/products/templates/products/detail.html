@@ -6,7 +6,9 @@
 
 {% block main_content %}
     <div class="image">
-       <a href="/media/{{product.image_big}}" target="_blank"><img class="product-image" alt="{{product.alt}}" src="/media/{{product.image_medium}}"></a>
+       <a href="{{product.image.url}}" target="_blank">
+           <img class="product-image" alt="{{product.alt}}" src="{{product.image.url}}" width="500">
+       </a>
     </div>
     <div>
         <h1 class="page-title">
