@@ -4,7 +4,9 @@ from .views import (
     main, contacts,
 )
 
+app_name = 'mainapp'
+
 urlpatterns = [
-    path('', main),
-    path('contacts', contacts),
+    path('', main, name='index'),
+    path('contacts', contacts, name='contacts'),
 ]

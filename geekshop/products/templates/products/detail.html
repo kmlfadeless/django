@@ -5,29 +5,29 @@
 {% endblock %}
 
 {% block main_content %}
-            <div class="image">
-               <a href="/static/mainapp/img/products/big/{{product.img_name}}" target="_blank"><img class="product-image" alt="{{product.alt}}" src="/static/mainapp/img/products/medium/{{product.img_name}}"></a>
-            </div>
-            <div>
-                <h1 class="page-title">
-                  {{product.name}}
-                </h1>
-                <div>
-                    <h2 class="sublevel product-description">Описание товара</h2>
-                    <p> {{product.description}} </p>
-                </div>
-                <a class="buy" href="#">Купить</a>
-            </div>
-            <h3 class="sublevel product-specifications">
-              Характеристики товара
-            </h3>
-            <div>
-                {{ product.characteristics }}
-            </div>
-            <h4 class="sublevel product-details">
-              Подробное описание товара
-            </h4>
-            <div>
-                {{ product.details }}
-            </div>
+    <div class="image">
+       <a href="/media/{{product.image_big}}" target="_blank"><img class="product-image" alt="{{product.alt}}" src="/media/{{product.image_medium}}"></a>
+    </div>
+    <div>
+        <h1 class="page-title">
+          {{product.name}}
+        </h1>
+        <div>
+            <h2 class="sublevel product-description">Описание товара</h2>
+            <p> {{product.description}} </p>
+        </div>
+        <a class="buy" href="#">Купить</a>
+    </div>
+    <h3 class="sublevel product-specifications">
+      Характеристики товара
+    </h3>
+    <div>
+        {{ product.characteristics }}
+    </div>
+    <h4 class="sublevel product-details">
+      Подробное описание товара
+    </h4>
+    <div>
+        {{ product.details }}
+    </div>
 {% endblock %}

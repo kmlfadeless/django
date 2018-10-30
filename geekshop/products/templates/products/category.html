@@ -10,8 +10,8 @@
     </h1>
     <div class="catalog-list">
         <ul>
-            {% for category in categories %}
-                {% include 'products/components/catalog_item.html' with count=category.id category=category %}
+            {% for product in products %}
+                {% include 'products/components/catalog_product_item.html' with count=product.id product=product %}
             {% endfor %}
         </ul>
     </div>
