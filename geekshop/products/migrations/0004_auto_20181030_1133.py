@@ -2,6 +2,7 @@
 
 from django.db import migrations
 from products.models import Product
+from images.models import Image
 import json
 
 
@@ -17,6 +18,7 @@ def create_default_products(apps, schema_editor):
             description=product['description'],
             characteristics=product['characteristics'],
             details=product['details'],
+            image=Image.objects.get(title='default')
         )
         new_product.save()
 
