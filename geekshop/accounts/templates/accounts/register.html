@@ -5,6 +5,9 @@ User Login
 {% endblock %}
 
 {% block main_content %}
+
+<h1>Create user</h1>
+
 <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
 
@@ -27,6 +30,4 @@ User Login
 
 <input type="submit">
 </form>
-<br /><br />
-<a href="/accounts/register/">Register</a>
 {% endblock %}

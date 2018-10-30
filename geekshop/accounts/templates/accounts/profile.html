@@ -1,0 +1,11 @@
+{% extends 'master.html' %}
+
+{% block page_title %}
+User Login
+{% endblock %}
+
+{% block main_content %}
+
+<p>Hello, {{request.user.username}}</p>
+
+{% endblock %}
