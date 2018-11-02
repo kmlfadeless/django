@@ -36,16 +36,10 @@ class Product(models.Model):
         blank=True,
         null=True,
     )
-    image_small = models.ImageField(
-        upload_to='products/small',
-        null=True,
-    )
-    image_medium = models.ImageField(
-        upload_to='products/medium',
-        null = True,
-    )
-    image_big = models.ImageField(
-        upload_to='products/big',
+    image = models.ForeignKey(
+        'images.Image',
+        on_delete=models.PROTECT,
+        blank=True,
         null=True,
     )
     alt = models.CharField(
