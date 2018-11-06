@@ -64,7 +64,7 @@ def product_create(request):
 def category_list(request):
     query = Category.objects.all()
 
-    return render(request, 'products/catalog.html', {'categories': query})
+    return render(request, 'products/__catalog.html', {'categories': query})
 
 
 def product_list(request, pk):
@@ -74,7 +74,7 @@ def product_list(request, pk):
 
     products = paginator.get_page(page)
 
-    return render(request, 'products/category.html', {'products': products})
+    return render(request, 'products/list.html', {'products': products})
 
 
 def product_detail_by_url_key(request, url_key):

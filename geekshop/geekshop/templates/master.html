@@ -49,7 +49,10 @@
                     <a href="{% url 'mainapp:index' %}">Главная</a>
                 </li>
                 <li>
-                    <a href="{% url 'products:index' %}">Каталог</a>
+                    <a href="{% url 'products:list' %}">Продукты</a>
+                </li>
+                <li>
+                    <a href="{% url 'categories:list' %}">Категории</a>
                 </li>
                 <li>
                     <a href="{% url 'mainapp:contacts' %}">Контакты</a>
@@ -81,16 +84,10 @@
                         <a href="{% url 'mainapp:index' %}">Главная</a>
                     </li>
                     <li>
-                        <a href="{% url 'products:index' %}">Каталог</a>
+                        <a href="{% url 'products:list' %}">Продукты</a>
                     </li>
                     <li>
-                        <a href="{% url 'mainapp:contacts' %}">Контакты</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'mainapp:index' %}">Главная</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'products:index' %}">Каталог</a>
+                        <a href="{% url 'categories:list' %}">Категории</a>
                     </li>
                     <li>
                         <a href="{% url 'mainapp:contacts' %}">Контакты</a>
