@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 
-from .models import Product
+from .models import Product, Category
 
 
 class ProductForm(ModelForm):
@@ -11,3 +11,9 @@ class ProductForm(ModelForm):
             'description', 'characteristics', 'details',
             'url_key', 'category'
         ]
+
+
+class CategoryForm(ModelForm):
+    class Meta:
+        model = Category
+        fields = ['title', 'snippet']
